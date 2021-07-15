@@ -1,0 +1,41 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: underline;
+}
+.map-container{
+  height: 75vh;
+}
+#map {
+  width: 100%;
+  height: 100%;
+
+}
+
+.box .navigation-icon {
+  margin-top: 5%;
+  width: 90px;
+  text-align: center;
+}
+
+.box .navigation-icon .icons{
+  width: 100%;
+  border: 3px solid #000!important;
+
+}
+
+.box .navigation-icon .icons .fa{
+  font-size: 50px;
+}
+.box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+agm-map {
+  height: 100%;
+}

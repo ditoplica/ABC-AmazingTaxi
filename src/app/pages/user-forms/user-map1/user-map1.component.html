@@ -1,0 +1,69 @@
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12" style="margin-top: 10px;">
+      <div class="book-now" style="height:50px;">
+        <a href="#">Book a taxi</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="map-container" >
+        <div id="map">
+          <agm-map [latitude] = 'latitude' [longitude] = 'longitude' [zoom]= "screenWidth > 500 ? 13 : 12" style="padding:0px !important; margin:0px !important;">
+            <agm-marker *ngFor="let coordinate of coordinates" [latitude] = 'coordinate.latitude' [longitude] = 'coordinate.longitude'>
+            </agm-marker>
+          </agm-map>
+        </div>
+        <!--        <p>Screen Width: {{screenWidth}}</p>-->
+        <!--        <p>Zoom: {{screenWidth > 500 ? 13 : 12}}</p>-->
+        <div class="box" >
+          <div class="navigation-icon">
+            <button class="create"  type="button" mat-raised-button	 color="danger" style="color: lightseagreen;"  (click)="historyBTN()">
+              <mat-icon>history</mat-icon>
+              <p>History</p>
+            </button>
+          </div>
+          <div class="navigation-icon">
+            <button class="create"  type="button"  mat-raised-button	 color="danger" style="color: white;background-color: lightseagreen;  padding:0px 25px !important;"  (click)="mapBTN()">
+              <mat-icon>navigation</mat-icon>
+              <p>Map</p>
+            </button>
+          </div>
+          <div class="navigation-icon">
+            <button class="create" type="button"  mat-raised-button	 color="danger" style="color: lightseagreen;  padding:0px 25px !important;"   (click)="settingsBTN()">
+              <mat-icon>account_circle</mat-icon>
+              <p>User</p>
+            </button>
+          </div>
+          <!--          <div class="navigation-icon">-->
+          <!--            <div class="icons">-->
+          <!--              <i class="fa fa-map-marker"></i>-->
+          <!--            </div>-->
+          <!--            <p>History</p>-->
+          <!--          </div>-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
